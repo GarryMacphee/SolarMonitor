@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/headerId"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="40dp"
+		android:gravity="center_horizontal"
+		android:padding="16dp"
+		android:text="@string/simple_solar_energy_monitor"
+		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+		app:layout_constraintBottom_toTopOf="@id/timeLabelId"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/timeLabelId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/time_value_padding_16"
+		android:text="@string/time_label"
+		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+		app:layout_constraintBottom_toTopOf="@id/timeValueId"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<androidx.appcompat.widget.AppCompatEditText
+		android:id="@+id/timeValueId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:editable="false"
+		android:hint="@string/tme_value_hint"
+		android:padding="@dimen/time_value_padding_16"
+		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+		android:textColor="@color/blue"
+		app:backgroundTint="@color/blue"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/timeLabelId" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/wattsLabelId"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="40dp"
+		android:gravity="center_horizontal"
+		android:padding="@dimen/time_value_padding_16"
+		android:text="@string/watts"
+		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/timeValueId" />
+
+	<androidx.appcompat.widget.AppCompatEditText
+		android:id="@+id/wattsValueId"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:clickable="false"
+		android:editable="false"
+		android:hint="@string/Watts_hint_text"
+		android:padding="@dimen/time_value_padding_16"
+		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+		android:textColor="@color/blue"
+		app:backgroundTint="@color/blue"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/wattsLabelId" />
+
+
+	<Button
+		android:id="@+id/fetchButtonId"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/default_margin"
+		android:background="@drawable/button_state"
+		android:elegantTextHeight="true"
+		android:elevation="6dp"
+		android:enabled="true"
+		android:focusable="true"
+		android:padding="@dimen/time_value_padding_16"
+		android:text="@string/get_watts"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<ProgressBar
+		android:id="@+id/progressBar"
+		style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+		android:layout_width="@dimen/progressbar_padding"
+		android:layout_height="@dimen/progressbar_height"
+		android:layout_marginStart="@dimen/default_margin"
+		android:layout_marginTop="@dimen/default_margin"
+		android:layout_marginEnd="@dimen/default_margin"
+		android:layout_marginBottom="@dimen/default_margin"
+		android:max="5"
+		android:progress="0"
+		app:layout_constraintBottom_toTopOf="@+id/fetchButtonId"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/wattsValueId"
+		tools:visibility="visible" />
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/progressbarLabelId"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_horizontal"
+		android:text="@string/time_till_next_update"
+		android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/progressBar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

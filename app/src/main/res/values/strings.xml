@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Solar Monitor</string>
+	<string name="error_api_call_failure">Error fetching energy values</string>
+	<string name="simple_solar_energy_monitor">Simple Solar Energy Monitor</string>
+	<string name="get_watts">Get Watts</string>
+	<string name="time_till_next_update">Time till next update</string>
+	<string name="watts">Watts</string>
+	<string name="Watts_hint_text">500</string>
+	<string name="tme_value_hint">12:00 2/6/2020</string>
+	<string name="time_label">Time</string>
+</resources>

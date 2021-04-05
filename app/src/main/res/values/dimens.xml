@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="time_value_padding_16">16dp</dimen>
+	<dimen name="progressbar_padding">135dp</dimen>
+	<dimen name="progressbar_height">21dp</dimen>
+	<dimen name="default_margin">16dp</dimen>
+</resources>
